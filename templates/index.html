@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product and Service Presentation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      section {
+        max-width: 800px;
+        margin: 2em auto;
+        padding: 1em;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      p {
+        color: #666;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      input,
+      textarea,
+      button {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Product and Service Presentation</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Our Products</h2>
+        <p>We offer a variety of high-quality products to meet your needs.</p>
+        <img
+          src="images\artturi-jalli-g5_rxRjvKmg-unsplash.jpg"
+          alt="unsplash image"
+        />
+        <h2>Our Services</h2>
+        <p>
+          Explore our services designed to provide the best solutions for you.
+        </p>
+        <img
+          src="images/florian-krumm-1osIUArK5oA-unsplash.jpg"
+          alt="unsplash image"
+        />
+
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="/send_email" method="post">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="email">Your Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send Email</button>
+        </form>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Product and Service Presentation</p>
+    </footer>
+  </body>
+</html>
